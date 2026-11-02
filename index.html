@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UINSA Digital Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <span class="badge">UINSA</span>
+            <h1 id="nav-title">Sistem Informasi UIN Sunan Ampel</h1>
+        </div>
+        <div class="lang-switcher">
+            <button onclick="setLanguage('id')" class="lang-btn active" id="btn-id">ID</button>
+            <button onclick="setLanguage('en')" class="lang-btn" id="btn-en">EN</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="card">
+            <h2 id="hero-heading">Portal Layanan Akademik & Arsip Digital</h2>
+            <p id="hero-desc">Sistem pengelolaan data berbasis Docker yang cepat, aman, dan efisien untuk civitas akademika UIN Sunan Ampel Surabaya.</p>
+            
+            <div class="action-box">
+                <button id="action-btn" class="primary-btn" onclick="triggerAction()">Simulasi Akses Data</button>
+                <p id="status-output" class="output-text"></p>
+            </div>
+        </section>
+
+        <!-- NEW: Statistics Section -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h3 id="stat-1-title">Arsip Digital</h3>
+                <p class="stat-number">12,450+</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="stat-2-title">Mahasiswa Aktif</h3>
+                <p class="stat-number">18,200+</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="stat-3-title">Fakultas</h3>
+                <p class="stat-number">9</p>
+            </div>
+        </section>
+
+        <!-- NEW: Service Request Simulator -->
+        <section class="card form-card">
+            <h3 id="form-title">Ajukan Layanan Surat / Transkrip</h3>
+            <form id="service-form" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label id="label-name" for="studentName">Nama Lengkap / Full Name:</label>
+                    <input type="text" id="studentName" placeholder="Masukkan nama Anda..." required>
+                </div>
+                <div class="form-group">
+                    <label id="label-service" for="serviceType">Jenis Layanan / Service Type:</label>
+                    <select id="serviceType">
+                        <option value="transkrip">Transkrip Nilai / Academic Transcript</option>
+                        <option value="aktif">Surat Keterangan Aktif Kuliah / Enrollment Certificate</option>
+                        <option value="penelitian">Izin Penelitian / Research Permit</option>
+                    </select>
+                </div>
+                <button type="submit" id="submit-btn" class="primary-btn">Kirim Permohonan</button>
+            </form>
+            <p id="form-output" class="output-text"></p>
+        </section>
+
+        <!-- Feature Grid -->
+        <section class="grid">
+            <div class="info-card">
+                <h3>🐳 Dockerized</h3>
+                <p id="feature-1">Aplikasi berjalan terisolasi dan konsisten di seluruh lingkungan server.</p>
+            </div>
+            <div class="info-card">
+                <h3>🌐 Dual Language</h3>
+                <p id="feature-2">Mendukung Bahasa Indonesia dan Bahasa Inggris secara dinamis.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Universitas Islam Negeri Sunan Ampel Surabaya — Academic Project Showcase</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
